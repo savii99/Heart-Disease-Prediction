@@ -4,51 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heart Disease Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        input {
+            width: calc(100% - 16px);
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        p {
+            margin-top: 20px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <h1>Heart Disease Prediction</h1>
 
     <form action="/predict" method="post">
         <label for="age">Age:</label>
-        <input type="text" name="age" required><br>
+        <input type="text" name="age" required>
 
         <label for="sex">Sex (0 for female, 1 for male):</label>
-        <input type="text" name="sex" required><br>
+        <input type="text" name="sex" required>
 
-        <label for ="cp">Chest pain(1: typical angina, 2: atypical angina, 3: non-aginal pain, 4: asymptomatic): </label>
-        <input type="text" name="cp" required><br>
+        <label for="cp">Chest pain type:</label>
+        <input type="text" name="cp" required>
 
         <label for="trestbps">Resting blood pressure:</label>
-        <input type="text" name="trestbps" required><br>
+        <input type="text" name="trestbps" required>
 
-        <label for="chol">Cholestoral :</label>
-        <input type="text" name="chol" required><br>
+        <label for="chol">Cholesterol:</label>
+        <input type="text" name="chol" required>
 
-        <label for="fbs">Fast blood sugar>120 (1= Yes, 0=No):</label>
-        <input type="text" name="fbs" required><br>
+        <label for="fbs">Fasting blood sugar (>120):</label>
+        <input type="text" name="fbs" required>
 
-        <label for="restecg">Resting electrocardiographic results (0: normal, 1: having ST-T wave abnormality, 2: showing probabal or definite left ventricular hypertrophy ):</label>
-        <input type="text" name="restecg" required><br>
+        <label for="restecg">Resting ECG results:</label>
+        <input type="text" name="restecg" required>
 
-        <label for="thalach">Maximum heart rate :</label>
-        <input type="text" name="thalach" required><br>
+        <label for="thalach">Maximum heart rate:</label>
+        <input type="text" name="thalach" required>
 
-        <label for="exang">Excercise included angina (1= yes, 0=no) :</label>
-        <input type="text" name="exang" required><br>
+        <label for="exang">Exercise-induced angina:</label>
+        <input type="text" name="exang" required>
 
-        <label for="oldpeak">ST depression indced by exercise :</label>
-        <input type="text" name="oldpeak" required><br>
+        <label for="oldpeak">ST depression induced by exercise:</label>
+        <input type="text" name="oldpeak" required>
 
-        <label for="slope"> slope of the peak exercise ST segment (1: upsloping, 2: flat, 3: downsloping):</label>
-        <input type="text" name="slope" required><br>
+        <label for="slope">Slope of peak exercise ST segment:</label>
+        <input type="text" name="slope" required>
 
-        <label for="ca ">Number of major vessels (0-3):</label>
-        <input type="text" name="ca " required><br>
+        <label for="ca">Number of major vessels (0-3):</label>
+        <input type="text" name="ca" required>
 
-        <label for="thal">3= normal, 6= fixed defect, 7= reversable defect:</label>
-        <input type="text" name="thal" required><br>
+        <label for="thal">Thalassemia type:</label>
+        <input type="text" name="thal" required>
 
-            
         <input type="submit" value="Predict">
     </form>
 
