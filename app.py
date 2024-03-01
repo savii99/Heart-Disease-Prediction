@@ -4,8 +4,8 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load the pre-trained Random Forest model
-with open('random_forest_model.pkl', 'rb') as model_file:
+# Load the pre-trained LogisticRegression model
+with open('LogisticRegression_model.pkl', 'rb') as model_file:
     model = pickle.load(model_file)
 
 with open('standard_scaler.pkl', 'rb') as model_file1:
